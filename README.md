@@ -127,4 +127,8 @@ A continuación se presentan algunas capturas de pantalla de la aplicación:
 ![Detalle del Anuncio](capturas/listing-detail.png)
 
 ### Crear Anuncio
+<<<<<<< HEAD
 ![Crear Anuncio](capturas/create-listing.png)
+=======
+![Crear Anuncio](capturas/create-listing.png)
+>>>>>>> 964c561893ab4509e78132548044da1ab53bb8f5
