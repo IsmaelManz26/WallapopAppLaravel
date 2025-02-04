@@ -1,66 +1,130 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MercadoSegundaMano
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+MercadoSegundaMano es una aplicación web desarrollada en Laravel que permite a los usuarios comprar y vender artículos de segunda mano. Los usuarios pueden registrarse, iniciar sesión, crear anuncios, ver anuncios disponibles, y comprar artículos.
 
-## About Laravel
+## Requisitos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP >= 8.1
+- Composer
+- MySQL
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Instalación
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clona el repositorio:
 
-## Learning Laravel
+    ```sh
+    git clone https://github.com/IsmaelManz26/WallapopAppLaravel.git
+    cd mercadoSegundaMano
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Instala las dependencias de PHP:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    ```sh
+    composer install
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Instala las dependencias de Node.js:
 
-## Laravel Sponsors
+    ```sh
+    npm install
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. Copia el archivo de configuración de entorno y configura tus variables de entorno:
 
-### Premium Partners
+    ```sh
+    cp .env.example .env
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+5. Genera la clave de la aplicación:
 
-## Contributing
+    ```sh
+    php artisan key:generate
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Configura la base de datos en el archivo [.env](http://_vscodecontentref_/1):
 
-## Code of Conduct
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nombre_de_tu_base_de_datos
+    DB_USERNAME=tu_usuario
+    DB_PASSWORD=tu_contraseña
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+7. Ejecuta las migraciones y los seeders:
 
-## Security Vulnerabilities
+    ```sh
+    php artisan migrate --seed
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+8. Compila los assets de frontend:
 
-## License
+    ```sh
+    npm run dev
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9. Inicia el servidor de desarrollo:
+
+    ```sh
+    php artisan serve
+    ```
+
+## Características
+
+- **Autenticación de usuarios**: Registro, inicio de sesión y cierre de sesión.
+- **Gestión de anuncios**: Crear, editar y eliminar anuncios.
+- **Compra de artículos**: Los usuarios pueden comprar artículos y marcar los anuncios como vendidos.
+- **Notificaciones**: Los usuarios reciben notificaciones sobre las compras y ventas.
+- **Filtros de búsqueda**: Filtrar anuncios por categoría.
+
+## Estructura del Proyecto
+
+- [Controllers](http://_vscodecontentref_/2): Controladores de la aplicación.
+- [Models](http://_vscodecontentref_/3): Modelos de Eloquent.
+- [Notifications](http://_vscodecontentref_/4): Notificaciones de la aplicación.
+- [config](http://_vscodecontentref_/5): Archivos de configuración.
+- [migrations](http://_vscodecontentref_/6): Migraciones de la base de datos.
+- [factories](http://_vscodecontentref_/7): Fábricas de modelos para pruebas.
+- [public](http://_vscodecontentref_/8): Archivos públicos (CSS, JS, imágenes).
+- [views](http://_vscodecontentref_/9): Vistas de Blade.
+- [routes](http://_vscodecontentref_/10): Archivos de rutas.
+- [storage](http://_vscodecontentref_/11): Archivos generados por la aplicación (logs, caché).
+- [tests](http://_vscodecontentref_/12): Pruebas unitarias y funcionales.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Realiza tus cambios y haz commit (`git commit -am 'Agrega nueva característica'`).
+4. Sube tus cambios a tu fork (`git push origin feature/nueva-caracteristica`).
+5. Abre un Pull Request en el repositorio original.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de [imanrei343@ieszaidinvergeles.org](mailto:imanrei343@ieszaidinvergeles.org).
+
+## Capturas de Pantalla
+
+A continuación se presentan algunas capturas de pantalla de la aplicación:
+
+### Página de Inicio
+![Página de Inicio](capturas/homepage.png)
+
+### Registro de Usuario
+![Registro de Usuario](capturas/register.png)
+
+### Lista de Anuncios
+![Lista de Anuncios](capturas/listings.png)
+
+### Detalle del Anuncio
+![Detalle del Anuncio](capturas/listing-detail.png)
+
+### Crear Anuncio
+![Crear Anuncio](capturas/create-listing.png)
