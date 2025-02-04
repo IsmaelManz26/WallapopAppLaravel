@@ -124,7 +124,7 @@ A continuación se presentan algunas capturas de pantalla de la aplicación:
 ![Lista de Anuncios](screenshots/listings.png)
 
 ### Detalle del Anuncio
-![Detalle del Anuncio](screenshots/listing-detail.png)
+![Detalle del Anuncio](screenshots/listings-detail.png)
 
 ### Crear Anuncio
 ![Crear Anuncio](screenshots/create-listing.png)
