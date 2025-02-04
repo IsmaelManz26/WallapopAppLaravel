@@ -115,20 +115,16 @@ Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de [im
 A continuación se presentan algunas capturas de pantalla de la aplicación:
 
 ### Página de Inicio
-![Página de Inicio](capturas/homepage.png)
+![Página de Inicio](screenshots/home.png)
 
 ### Registro de Usuario
-![Registro de Usuario](capturas/register.png)
+![Registro de Usuario](screenshots/register.png)
 
 ### Lista de Anuncios
-![Lista de Anuncios](capturas/listings.png)
+![Lista de Anuncios](screenshots/listings.png)
 
 ### Detalle del Anuncio
-![Detalle del Anuncio](capturas/listing-detail.png)
+![Detalle del Anuncio](screenshots/listing-detail.png)
 
 ### Crear Anuncio
-<<<<<<< HEAD
-![Crear Anuncio](capturas/create-listing.png)
-=======
-![Crear Anuncio](capturas/create-listing.png)
->>>>>>> 964c561893ab4509e78132548044da1ab53bb8f5
+![Crear Anuncio](screenshots/create-listing.png)
